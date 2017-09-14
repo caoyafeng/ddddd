@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>移动端</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+	    <style>
+	    	html{
+	    		height:100%;
+	    	}
+	    	body{
+	    		margin:0px;
+	    		height:100%;
+	    	}
+	    	header{
+	    		width:100%;
+	    		height:40px;
+	    		background:deepskyblue;
+	    		display:flex;
+	    		justify-content:space-around;
+	    		align-items:center;
+	    	}
+	    	nav{
+	    		width:100%;
+	    		height:80px;
+	    		background:dodgerblue;
+	    		position:relative;
+	    		display:flex;
+	    		justify-content:space-around ;
+	    		align-items:center;
+	    	}
+	    	p{
+	    		margin:0px;
+	    		padding:0px;
+	    		color:white;
+	    		font-size:18px;
+	    		width:76px;
+	    		height:25px;
+	    		border:1px solid #ccc;
+	    		text-align:center;
+	    		line-height:25px;
+	    		border-radius:20px;
+	    	}
+	    	ul,li{
+	    		position:relative;
+	    		padding:0px;
+	    		list-style:none;
+	    		margin:0px;
+	    	}
+	    	footer{
+	    	
+	    		height:100%;
+	    	}
+	    	footer ul{
+	    		position:relative;
+	    		display:flex;
+	    		flex-wrap: wrap;
+	    		height:100%;
+	    	}
+	    	
+	    	
+	    	footer li{
+	    		height:34%;
+	    		width:50%;
+	    	}
+	    	img{
+	    	
+	    		margin:0px;
+	    		width:100%;
+	    		height:100%;
+	    		z-index:-1;
+	    	}
+	    	span{
+	    		position:absolute;
+	    		color:white;
+	    		bottom:0px;
+	    		left:0px;
+	    		
+	    		
+	    	}
+			@font-face {
+				  
+				  font-family: 'iconfont';
+				  src: url('ico/iconfont.eot');
+				  src: url('ico/iconfont.eot?#iefix') format('embedded-opentype'),
+				  url('ico/iconfont.woff') format('woff'),
+				  url('ico/iconfont.ttf') format('truetype'),
+				  url('ico/iconfont.svg#iconfont') format('svg');
+				}
+			.iconfont{
+				  color:white;
+				  font-size:30px;
+				  font-family:"iconfont" !important;
+				  font-style:normal;
+				  -webkit-font-smoothing: antialiased;
+				  -webkit-text-stroke-width: 0.2px;
+				  -moz-osx-font-smoothing: grayscale;
+            }
+	    </style>
+	</head>
+	<body>
+		<header>
+			<i class="iconfont">&#xe699;</i>
+			<i class="iconfont">&#xe702;</i>
+			<i class="iconfont">&#xe6b4;</i>
+		</header>
+		<nav>
+		   <p>全部</p>
+		   <p>热门</p>
+		   <p>推荐</p>
+        
+		</nav>
+		<footer>
+			<ul>
+				<li><span>时尚</span><img src="img/pic_1.jpg" /></li>
+				<li><span>科技</span><img src="img/pic_2.jpg" /></li>
+				<li><span>体育</span><img src="img/pic_3.jpg" /></li>
+				<li><span>财经</span><img src="img/pic_4.jpg" /></li>
+				<li><span>汽车</span><img src="img/pic_1.jpg" /></li>
+				<li><span>家居</span><img src="img/pic_5.jpg" /></li>
+			</ul>
+		</footer>
+	</body>
+</html>
