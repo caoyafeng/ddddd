@@ -1,0 +1,116 @@
+.wrapBox{
+    width:100%;
+    height:100%;
+    position:fixed;
+    .box{
+        width:100%;
+        height:100%;
+        overflow:hidden;
+    }
+    
+}
+
+.w960{
+    width:960px;
+    height:100%;
+    margin:0 auto;
+    position:relative;
+}
+.page1_01{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(0deg);
+    transition:all 2s ease 0s;
+}
+.page1{
+    background:url(../img/index-slide-bg1.jpg) no-repeat;
+    background-size:cover;
+    
+}
+
+.page2{
+    background:url(../img/in_top_bj.jpg) no-repeat;
+    background-size:cover;
+    .page2_01{
+        width:900px;
+        height:600px;
+        position:absolute;
+        left:50%;
+        top:50%; 
+        transform:translate(-50%,-50%);
+        color:white;
+        img{
+            display:block;
+            margin:0 auto;
+           
+        }
+        h1{
+            font-size:60px;
+            text-align:center;
+        }
+       ul{
+           margin:0px;
+           padding:0px;
+           list-style:none;
+           width:900px;
+          li{
+               margin-left:90px;
+               float:left;
+               text-align:center;
+           }
+          
+       }
+    }
+    
+}
+.page3{
+    background:yellowgreen;
+}
+.page4{
+    
+    background-image:linear-gradient(-90deg,dodgerblue,blue);
+  
+}
+
+.nav{
+    width:30px;
+    height:110px;
+   padding-top:14px;
+    background:rgba(225,225,225,0.4);
+    position:fixed;
+    top:50%;
+    margin-top:-82px;
+    right:20px;
+    border:1px solid rgba(225,225,225,0.6);
+    border-radius:10px;
+    ul{
+        margin:0px;
+        padding:0px;
+        list-style:none;
+    }
+}
+.nav li{
+    
+    width:15px;
+    height:15px;
+    background-size:cover;
+    background:url(../img/sprite.png) no-repeat -40px -130px; 
+    margin:5px auto;
+    cursor:pointer;
+    position:relative;
+}
+.nav li.current{
+    background-position:-40px -110px;
+}
+.nav li span{
+    width:100px;
+    height:19px;
+    position:absolute;
+    background:url(../images/sprite.png) no-repeat 0 -80px;
+    left:-100px;
+    top:0;
+    text-align:center;
+    line-height:19px;
+    color:#fff;
+}
