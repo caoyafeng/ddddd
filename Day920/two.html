@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			width:100px;
+			height:100px;
+			background:#ccc;
+			
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box"></div>
+	</body>
+	<script src="js/hammer.js"></script>
+	<script>
+		var oDiv = document.getElementById("box");
+		oDiv.addEventListener("touchstart",function(ev){
+			ev.preventDefault();
+		})
+		oDiv.addEventListener('touchend',function(e){
+			//this.style.display="none";
+		})
+		var hins = new Hammer(oDiv);
+		hins.get('pinch').set({enable:true});
+		hins.on('panleft',function(){
+			console.log("swipe left");
+		})
+		hins.on("panright",function(){
+			console.log("swipe right");
+		})
+		var sc=1;
+		hins.on("pinchin",function(){
+			sc-=0.003;
+			oDiv.style.transform="scale("+sc+")";
+		})
+		hins.on("pinchout",function(){
+			sc+=0.03;
+			oDiv.style.transform="scale("+sc+")";
+		})
+	</script>
+</html>
