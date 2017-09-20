@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style>
+			.box{
+				width:100px;
+				height:100px;
+				border:1px solid red;
+		    }
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box"></div>
+	</body>
+	<script>
+		var oBox = document.getElementById("box");
+		var str="";
+		for(var i=65;i<91;i++){
+			str+=String.fromCharCode(i);
+		}
+		for(var i=97;i<123;i++){
+			str+=String.fromCharCode(i);
+		}
+		for(var i=0;i<=9;i++){
+			str+=i;
+		}
+		var yzm = "";
+		
+	    oBox.addEventListener('click',function(){
+	     	for(var i=0;i<4;i++){
+			n = Math.trunc(Math.random()*62);
+			yzm += str[n];
+		}
+	    })
+	    
+	    oBox.addEventListener('touchstart',function(e){
+	    	oBox.innerHTML = yzm;
+	    })
+		oBox.addEventListener('touchend',function(e){
+			oBox.innerHTHL = "";
+			console.log(1);
+		})
+	</script>
+</html>

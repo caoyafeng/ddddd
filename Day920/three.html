@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <script src="js/hammer.js"></script>
+	    <style>
+	    	body{
+	    		margin:0px;
+	    		padding:0px;
+	    	}
+	    	.box{
+	    		width:100%;
+	    		height:200px;
+	    		margin:0px;
+	    		padding:0px;
+	    	}
+	    	ul{
+	    		width:400%;
+	    		height:200px;
+	    		margin:0px;
+	    		padding:0px;
+	    		list-style:none;
+	    		
+	    	}
+	    	ul li{
+	    		float:left;
+	    	}
+	    	ul li:nth-of-type(1){
+	    		width:25%;
+	    		height:100%;
+	    		background:red;
+	    	}
+	    	ul li:nth-of-type(2){
+	    		width:25%;
+	    		height:100%;
+	    		background:seagreen;
+	    	}
+	    	ul li:nth-of-type(3){
+	    		width:25%;
+	    		height:100%;
+	    		background:orangered;
+	    	}
+	    	ul li:nth-of-type(4){
+	    		width:25%;
+	    		height:100%;
+	    		background:blue;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div class="box">
+			<ul id="list">
+				<li>111</li>
+				<li>222</li>
+				<li>333</li>
+				<li>444</li>
+			</ul>
+		</div>
+		<script>
+			var n=0 ;
+			var list = document.getElementById("list");
+			var lis = list.getElementsByTagName("li");
+			
+			list.addEventListener("touchstart",function(ev){
+				ev.preventDefault();
+			})
+			var hins = new Hammer(list);
+			flag = true;
+			
+			hins.on('panleft',function(){
+				if(flag){
+				n++;
+				console.log(n);
+				if(n>lis.length-1){
+					n = lis.length-1;
+				}
+			}
+			list.style.transform = "translate3d(-"+n*25+"%,0,0)";
+			list.style.transition = "all 1s";
+			flag = false;
+		})
+		
+		hins.on('panright',function(){
+			if(flag){
+				n--;
+				console.log(n);
+				if(n<0){
+					n=0;
+				}
+			}	
+			list.style.transform = "translate3d(-"+n*25+"%,0,0)";
+			flag = false;
+		})	
+		
+		list.addEventListener('touchend',function(e){
+			flag = true;
+		})	
+		
+		</script>
+	</body>
+</html>
