@@ -4,10 +4,11 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
-			width:100px;
-			height:100px;
+			.box{
+			width:500px;
+			height:500px;
 			background:#ccc;
-			
+			}
 		</style>
 	</head>
 	<body>
@@ -33,10 +34,16 @@
 		var sc=1;
 		hins.on("pinchin",function(){
 			sc-=0.003;
+			if(sc<0.3){
+				sc=0.3;
+			}
 			oDiv.style.transform="scale("+sc+")";
 		})
 		hins.on("pinchout",function(){
 			sc+=0.03;
+			if(sc>0.3){
+				sc=3
+			}
 			oDiv.style.transform="scale("+sc+")";
 		})
 	</script>
