@@ -6,10 +6,12 @@
 		<link rel="stylesheet" href="css/kkmf.css" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 	    <link rel="stylesheet" href="css/section.css" />
+
 	</head>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/tab.js"></script>
 
 
 	<body>
@@ -25,15 +27,21 @@
 				</ul>
 			</div>
 			<div class="header-right">
-				<a href="#">注册</a>
-				<a href="#">登录</a>
+				<a href="dlzc.html">注册</a>
+				<a href="dlzc.html">登录</a>
 			</div>
 		</header>
 		<section class="section">
 			<div class="wrapBox">
 			    <div class="box page1 comeout">
+			    	<video autoplay muted loop style="width:100%" class="vid" id="vid">
+			    				<source src="https://source.kakamf.com/video/index-video-bg.webm" type="video/webm">
+			    	</video>
 			    	<div class="w960">
-			    		<div class="page1_01"><img src="img/index-dream.png"></div>
+			    	<div class="page1_01">	
+	                    <img src="img/index-dream.png">
+			    	</div>
+			
 			        </div>
 			    </div>
 			    <div class="box page2 comeout">
@@ -52,12 +60,120 @@
 			    <div class="box page3 ">
 			    	<div class="w960">
 			    		<div class="page3_01">
-			    			<img src="img/icon-index-home.jpg" />
-			    			
-			    		</div>
+			    			<div class="slider3-title">
+			    				<h2>最大化实现你的梦想</h2>
+			    			    <p>假设10万本金，5年内每月定投1万，对比4种理财在5年后的收益...(炒股？你当真有的赚吗？)</p>
+			    			</div>
+			    			<ul class="slider3-nav">
+			    				<li class="slider-item" name="icon-home-mask1">咔咔买房</li>
+			    				<li  name="icon-home-mask2">p2p理财</li>
+			    				<li  name="icon-home-mask3">信托理财</li>
+			    				<li  name="icon-home-mask4">银行定存</li>
+			    			</ul>
+			    			<div class="profit-contrast">
+			    				<img class="icon-home" src="img/icon-index-home.jpg" />
+				    			<div class="home-mask">
+				    				<div class="icon-home-mask1 show" >
+				    					<p>
+				    						选咔咔买房
+				    						<br>
+				    						可收获
+				    						<span>17.56㎡</span>
+				    					</p>
+				    					<img src="img/index-home-mask1.png" width="351" height="160"/>
+				    				</div>
+				    				<div class="icon-home-mask2 show" style="display:none">
+				    					<p>
+				    						选p2p理财
+				    						<br>
+				    						可收获
+				    						<span>9.86㎡</span>
+				    					</p>
+				    					<img src="img/index-home-mask2.png" width="196.5" height="89";/>
+				    				</div>
+				    				<div class="icon-home-mask3 show" style="display:none">
+				    					<p>
+				    						信托理财
+				    						<br>
+				    						可收获
+				    						<span>8.56㎡</span>
+				    					</p>
+				    					<img src="img/index-home-mask3.png" width="190.5" height="150" />
+				    				</div>
+				    				<div class="icon-home-mask4 show" style="display:none">
+				    					<p>
+				    						选银行定存
+				    						<br>
+				    						可收获
+				    						<span>7.59㎡</span>
+				    					</p>
+				    					<img src="img/index-home-mask4.png" width="89" height="103" />
+				    				</div>
+			    			    </div>
+			    			</div>
+			    			<div class="slider3-tip">
+			    				注:以上数据是以p2p年会12%收益，信托年华7%收益，银行定存年化2.75%收益为例，一线房产(以北京为例)近五年平均收益计算而出。
+			    			</div>
+			    		</div>	
+			    		
 			    	</div>
 			    </div>
-			    <div class="box page4 "></div>
+			    <div class="box page4 ">
+			    	<div class="w960">
+			    		<div class="page4_01">
+			    			<div class="introduction">
+			    				<h2>
+			    					<span>区块链</span>
+			    				    "底层技术支持"
+			    				</h2>
+			    				<p>未来金融科技全面保障资产安全</p>
+			    			</div>
+			    			<ul class="features">
+			    				<li>
+			    					<img src="img/icon-chain1.png" />
+			    					<p>
+			    						"网络账本"
+			    					     <br>
+			    					     "私人加密"
+			    					</p>
+			    				</li>
+			    				<li>
+			    					<img src="img/icon-chain3.png" />
+			    					<p>
+			    						"交易备案"
+			    					     <br>
+			    					     "永久备案"
+			    					</p>
+			    				</li>
+			    				<li>
+			    					<img src="img/icon-chain2.png" />
+			    					<p>
+			    						"实名合同"
+			    					     <br>
+			    					     "不可篡改"
+			    					</p>
+			    				</li>
+			    				<li>
+			    					<img src="img/icon-chain5.png" />
+			    					<p>
+			    						"智能系统"
+			    					     <br>
+			    					     "实时监测"
+			    					</p>
+			    				</li>
+			    				<li>
+			    					<img src="img/icon-chain4.png" />
+			    					<p>
+			    						"大数据链"
+			    					     <br>
+			    					     "全球备案"
+			    					</p>
+			    				</li>
+			    			</ul>
+			    		</div>
+			    		
+			    	</div>
+			    </div>
 			    
 		    </div>
 		    <div class="nav">

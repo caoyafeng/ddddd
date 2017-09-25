@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册登录</title>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<style>
+		    html{
+		    	height:100%;
+		    	margin:0px;
+		    	padding:0px;
+		    }
+		    body{
+		    	background-image:url(img/login_reg_bg.jpg);
+		    	height:100%;
+		    	margin:0px;
+		    	padding:0px;
+		    }
+		    img{
+		    	display:block;
+		    }
+		    .box{
+		    	width:300px;
+		    	background-color:#ccc;
+		    	margin:100px auto 0;
+		    	padding:30px 50px;
+		    }
+		    .box div{
+		    	width:100%;
+		    	height:30px;
+		    	margin-bottom:20px;
+		    	position:relative;
+		    }
+		    .box div i{
+		    	position:absolute;
+		    	width:20px;
+		    	height:20px;
+		    	padding:5px;
+		    	top:0;
+		    	left:0;
+		    }
+		    input{
+		    	width:298px;
+		    	height:28px;
+		    	position:absolute;
+		    	text-indent:34px;
+		    }
+		    button{
+		    	width:300px;
+		    	height:36px;
+		    	border:36px;
+		    	background-color:forestgreen;
+		    	color:#ffffff;
+		    	font-size:18px;
+		    	font-weight:bold;
+		    	cursor:pointer;
+		    	margin-top:20px;
+		    }
+		</style>
+		<script>
+			$(function(){
+				$("#login").click(function(){
+					var unameVal = $("#uname").val();
+					var upwdVal = $("#upwd").val();
+					if(unameVal.trim()==""||upwdVal.trim()==""){
+						alert("用户名或密码格式不正确！请重新输入！");
+						return;
+					}
+					$.ajax({
+						type:"post",
+						url:"php/login1.php",
+						data:{
+							uname:unameVal,
+							upwd:upwdVal,
+							type:"login"
+						},
+						dataType:"text",
+						success:function(data){
+							if(data === "success"){
+								alert("登录成功！");
+								window.location.href = "main.html";
+							}else{
+								alert("用户名或密码错误！")
+							}
+						}
+					})
+				})
+				
+				$('reg').click(function(){
+					var unameVal = $('#uname').val();
+					var upwdVal = $("#upwd").val();
+					if(unameVal.trim()==""||upwdVal.trim()==""){
+						alert("用户名或密码格式不正确！请重新输入！");
+						return;
+					}
+					$.ajax({
+						type:"post",
+						url:"php/login1.php",
+						async:true,
+						data:{
+							uname:unameVal,
+							upwd:upwdVal,
+							type:"reg"
+						},
+						success:function(data){
+							console.log(data)
+							if(data=="success"){
+								alert('注册成功！')
+							}else{
+								alert("注册失败")
+							}
+						},
+						complete:function(){
+							$("#uname").val("");
+							$("#upwd").val("");
+						}
+					});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="uname">
+				<input type="text" id="uname" />
+				<i><img src="img/用户名.png"></i>
+			</div>
+			<div>
+				<input type="password" id="upwd" />
+				<i><img src="img/密码.png"></i>
+			</div>
+			<button id="login">登录</button>
+		    <button id="reg">注册</button>
+		</div>
+		
+	</body>
+</html>
