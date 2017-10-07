@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv=“X-UA-Compitable” content=“IE=edge”>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="shortcut icon" href="img/life.jpg">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <title >life</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container body">
+    <div class="row">
+       <div class="col-xs-12">
+          <p><span class="logo" style="animation-duration: 1.5s">life0727</span></p>
+           <span id="dianji">点击播放☞</span>
+           <img class="playing pull-right" id="omusic" src="img/music97.png" alt=""/>
+       </div>
+    </div>
+    <p class="tomy">To love my life :</p>
+  <!--  <img src="img/arrow160.png" class="arrowimg" alt=""/>-->
+    <div class="box">
+        <img src="img/14.png" class="img-responsive img1"/>
+    </div>
+    <div class="box1" style="display: none">
+        <img src="img/151.png" class="img2" />
+    </div>
+    <div class="box2" style="display: none">
+        <img src="img/18.png" class="img3 " />
+    </div>
+    <div class="box3" style="display: none">
+        <img src="img/1.png" class="img4 " />
+    </div>
+    <div class="box4" style="opacity: 0"></div>
+    <div class="box5" style="opacity: 0">
+       <div class="div1">
+           <h1></h1>
+           <h2></h2>
+           <i></i>
+       </div>
+
+    </div>
+</div>
+</body>
+<script>
+    window.onload=function(){
+              /*logo*/
+        setInterval(function(){
+            $('.logo').toggleClass('animated flip');
+        },4000);
+        /*  /audio*/
+        $('body').append('<audio id="kanong" src="mp3/meetyou.mp3" autoplay="autoplay" loop="loop">');
+        $(function(){
+            $('#kanong')[0].play();
+        });
+        var oauido=$('#kanong')[0];
+        $('#omusic').on('touchend',function(){
+            if($(this).hasClass('playing')){
+                $(this).removeClass('playing');
+                oauido.pause()
+            }else{
+                $(this).addClass('playing');
+                oauido.play()
+            }
+        });
+        /*  ******首页************/
+        var memory=$('<p class="animated bounceInDown memory" style="animation-duration: 3s;animation-delay: 2s">My Memories-遇见</p>');
+        $('.box').append(memory);
+
+        /*   动画开始 ******/
+        setTimeout(function(){
+            $('.box').css('display','none');
+            $('.box1').css('display','block');
+            $('.img2').transition({scale:0.306},2500,"linear",function(){
+                var qunian=$('<img src="img/qunianjintian.png" class="animated fadeIn qunian" style="animation-duration: 3s; animation-delay: 1.5s">');
+                var me=$('<img src="img/me.jpg" class="animated fadeInLeftBig me" style="animation-duration: 2.5s;animation-delay: 5s">');
+                var yujian=$('<p class="animated fadeInRightBig yujian" style="animation-duration: 3s;animation-delay: 2.5s">那天晚上是我们的第一次遇见</p>>');
+                var diyicijian=$('<img src="img/diyicijian.png" class="animated fadeIn diyicijian" style="animation-duration: 3s;animation-delay: 8s" >');
+                var diyicijianta=$('<img src="img/ta1.jpg" class="animated fadeIn ta1" style="animation-duration: 2.5s;animation-delay: 7.0s" >');
+                var paiji=$('<img src="img/paiji.png" class="animated fadeIn paiji" style="animation-duration: 3s;animation-delay: 9s" >');
+                var puke2=$('<img src="img/puke2.png" class="animated fadeIn puke2" style="animation-duration: 3s;animation-delay: 9.3s" >');
+                var puke3=$('<img src="img/puke3.png" class="animated fadeIn puke3" style="animation-duration: 3s;animation-delay: 9.7s" >');
+                var puke4=$('<img src="img/puke4.png" class="animated fadeIn puke4" style="animation-duration: 3s;animation-delay: 10s" >');
+                $('.box1').append(qunian);
+                $('.box1').append(me);
+                $('.box1').append(diyicijianta);
+                $('.box1').append(yujian);
+                $('.box1').append(diyicijian);
+                $('.box1').append(paiji);
+                $('.box1').append(puke2);
+                $('.box1').append(puke3);
+                $('.box1').append(puke4);
+                /* *********第二动画开始***********/
+                setTimeout(function(){
+                    $('.box1').css('display','none');
+                    $('.box2').css('display','block');
+                    $('.img3').transition({scale:0.428},4000,"linear",function(){
+                        /* **********第三动画开始*********/
+                        setTimeout(function(){
+                            $('.box2').css('display','none');
+                            $('.box3').css('display','block');
+                            $('.img4').transition({scale:0.19},7000,"linear",function(){
+                                /* ********第四动画开始*******************/
+                                setTimeout(function(){
+                                    $('.box3').animate({'opacity':'0'},2000,function(){
+                                        $('.box4').animate({'opacity':'1'},3500);
+                                        var yueding=$('<img src="img/allhua.png"  class="animated fadeIn yueding img-responsive" style="animation-duration: 1.5s;animation-delay: 2s">')
+                                        var qianshou=$('<img src="img/qianshou.png"  class="animated fadeInLeft qianshou " style="animation-duration: 1.5s;animation-delay: 5s">')
+                                        var zhougong=$('<img src="img/zhougong.png"  class="animated fadeIn zhougong " style="animation-duration: 1.5s;animation-delay: 8s">')
+                                        var maozi=$('<img src="img/maozi.png"  class="animated fadeIn maozi " style="animation-duration: 1.5s;animation-delay: 11s">')
+                                        var yantai=$('<img src="img/yantai.png"  class="animated fadeInRight yantai " style="animation-duration: 1.5s;animation-delay: 14s">')
+                                        var xijiao=$('<img src="img/xijiao.png"  class="animated fadeInLeftBig xijiao " style="animation-duration: 2s;animation-delay: 17s">')
+                                        var huazhuang=$('<img src="img/huazhuang.png"  class="animated fadeIn huazhuang " style="animation-duration: 1.5s;animation-delay: 20s">')
+                                        var xiao=$('<img src="img/xiao.png"  class="animated fadeInLeft xiao " style="animation-duration: 1.5s;animation-delay: 23s">')
+                                        var chuan=$('<img src="img/chuan.png"  class="animated fadeInRightBig chuan " style="animation-duration: 2s;animation-delay: 26s">')
+                                        var biaobai=$('<img src="img/biaobai.png"  class="animated fadeIn biaobai " style="animation-duration: 1.5s;animation-delay: 29s">')
+                                        var jiezhi=$('<img src="img/jiezhi.png"  class="animated fadeInRight jiezhi " style="animation-duration: 1.5s;animation-delay: 32s">')
+                                        var nvren=$('<img src="img/nvren.png"  class="animated fadeInLeftBig nvren " style="animation-duration: 2s;animation-delay: 35s">')
+                                        var hunsha=$('<img src="img/hunsha.png"  class="animated fadeIn hunsha " style="animation-duration: 1.5s;animation-delay: 39s">')
+                                        var jiaoshi=$('<img src="img/jiaoshi.png"  class="animated fadeInLeft jiaoshi " style="animation-duration: 1.5s;animation-delay: 42s">')
+                                        var bufen=$('<img src="img/bufen.png"  class="animated fadeIn bufen " style="animation-duration: 1.5s;animation-delay: 45s">')
+                                        var cengjing=$('<img src="img/cengjing.png"  class="animated fadeInUp cengjing img-responsive " style="animation-duration: 2.5s;animation-delay: 49s">')
+                                        var houlai=$('<img src="img/houlai.png"  class="animated fadeInUp houlai img-responsive " style="animation-duration: 2.5s;animation-delay: 54s">')
+                                        var xiaolongnv=$('<img src="img/xiaolongnv.png"  class="animated fadeIn xiaolongnv img-responsive " style="animation-duration: 2.5s;animation-delay: 59.5s">')
+                                        $('.box4').append(yueding);
+                                        $('.box4').append(qianshou);
+                                        $('.box4').append(zhougong);
+                                        $('.box4').append(maozi);
+                                        $('.box4').append(yantai);
+                                        $('.box4').append(xijiao);
+                                        $('.box4').append(huazhuang);
+                                        $('.box4').append(xiao);
+                                        $('.box4').append(chuan);
+                                        $('.box4').append(biaobai);
+                                        $('.box4').append(jiezhi);
+                                        $('.box4').append(nvren);
+                                        $('.box4').append(hunsha);
+                                        $('.box4').append(jiaoshi);
+                                        $('.box4').append(bufen);
+                                        $('.box4').append(cengjing);
+                                        $('.box4').append(houlai);
+                                        $('.box4').append(xiaolongnv);
+                                        /* **************第五动画开始******************/
+                                        setTimeout(function(){
+                                            $('.box4').animate({'opacity':'0'},4000,function(){
+                                                $('.box5').animate({'opacity':'1'},3500);
+                                                setTimeout(function(){
+                                                    var otext=" 遇见你 ";
+                                                    var otext2=" 是我最美丽的意外 ";
+                                                    var arr=otext.split('');
+                                                    var arr6=otext2.split('');
+                                                    var arr1=$('<b>|</b>');
+                                                    var arr8=$('<b>|</b>');
+                                                    var arr5=$('<b>_</b>');
+                                                    var arr2=[];
+                                                    var otext1="———By life0727 ";
+                                                    var oarr=otext1.split('');
+                                                    var arr4=[];
+                                                    var arr7=[];
+                                                    function fn1(){
+                                                        if(arr.length){
+                                                            setTimeout(function(){
+                                                                arr2.push(arr.shift());
+                                                                fn1();
+                                                            },250);
+                                                            $('h1').html(arr2);
+                                                            $('h1').append(arr1);
+                                                        }else{
+                                                            $('b').css('display','none');
+                                                            function fn4(){
+                                                                if(arr6.length){
+                                                                    setTimeout(function(){
+                                                                        arr7.push(arr6.shift());
+                                                                        fn4();
+                                                                    },250);
+                                                                    $('h2').html(arr7);
+                                                                    $('h2').append(arr8);
+                                                                }else{
+                                                                    $('b').css('display','none');
+                                                                    var j=0;
+                                                                    function fn3(){
+                                                                        if(j<5){
+                                                                            setTimeout(function(){
+                                                                                $('b').toggleClass('dd');
+                                                                                fn3()
+                                                                            },300);
+                                                                            $('i').append(arr5)
+                                                                        }else{
+                                                                            (function fn2(){
+                                                                                if(oarr.length){
+                                                                                    setTimeout(function(){
+                                                                                        arr4.push(oarr.shift());
+                                                                                        fn2();
+                                                                                    },250);
+                                                                                    $('i').html(arr4);
+                                                                                }
+                                                                            })();
+                                                                        }
+                                                                        j++;
+                                                                    }
+                                                                    fn3()
+                                                                }
+                                                            }fn4();
+                                                        }
+                                                    }
+                                                    fn1();
+                                                },5000)
+                                            })
+                                        },66500);
+                                        /* **************第五动画结束******************/
+                                    })
+                                },11000);
+                                /* ********第四动画结束*******************/
+                            });
+                        },6500);
+                        /* **********第三动画结束*********/
+                    });
+                },16500);
+                /* *************第二动画结束*************/
+            });
+        },9500);
+
+    };
+
+
+
+//    $('.d2').on('touchend',function(){
+//       $(this).css({
+//           'transform':'rotateY(180deg)',
+//           'backface-visibility':'hidden'
+//       });
+//        $('.d1').css({
+//            'transform':'rotateY(360deg)'
+//        })
+//    });
+//   $('.d1').click(function(){
+//       $(this).css({
+//           'transform':'rotateY(180deg)'
+//       });
+//       $('.d2').css({
+//           'transform':'rotateY(0deg)'
+//       })
+//   });
+  /* ***************/
+
+   /* function a(obj1,obj2){
+        $(obj2).click(function(){
+            $(obj2).css({
+                'transform':'rotateY(180deg)',
+                'backface-visibility':'hidden'
+            });
+            $(obj1).css({
+                'transform':'rotateY(360deg)'
+            })
+        });
+        $(obj1).click(function(){
+            $(obj1).css({
+                'transform':'rotateY(180deg)'
+            });
+            $(obj2).css({
+                'transform':'rotateY(0deg)'
+            })
+        });
+    }
+    a('.d1','.d2');*/
+</script>
+</html>

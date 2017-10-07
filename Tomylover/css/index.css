@@ -1,0 +1,306 @@
+body {
+  background: rgba(0, 0, 0, 0.8);
+  /*  .arrowimg{
+      position: absolute;
+      top:85%;
+      left:50%;
+      margin-left: -30px;
+      width:15%;
+      z-index: 999;
+      animation:oarrow 1.8s infinite;
+    }
+    @keyframes oarrow{
+      0%{transform:translateY(-10px);opacity: .6}
+      50%{transform:translateY(5px);opacity: 1}
+      100%{transform:translateY(-10px);opacity: .6}
+    }*/
+  /**************************/
+  /*  .d1,.d2{
+      width:100px;
+      height:100px;
+      position: absolute;
+      left:50%;
+      top:380px;
+      transition: 1s;
+    }
+    .d1{
+      background: #cccccc;
+      transform: rotateY(180deg);
+    }
+    .d2{
+      background: #ec971f;
+    }*/ }
+  body .logo {
+    margin-top: 5px;
+    font-family: "Segoe Script";
+    color: #d58512;
+    position: absolute;
+    z-index: 999;
+    font-size: 1.5rem; }
+  body .playing {
+    animation: orate 2s linear infinite; }
+@keyframes orate {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+  body #omusic {
+    position: fixed;
+    z-index: 999;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    width: 8%; }
+  body #dianji {
+    position: fixed;
+    z-index: 999;
+    top: 18px;
+    right: 50px;
+    color: #c0a16b; }
+  body .tomy {
+    position: absolute;
+    font-family: "Segoe Script";
+    color: snow;
+    font-size: 26px;
+    left: 10%;
+    top: 8%; }
+  body .box, body .box1, body .box2, body .box3, body .box4, body .box5 {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    top: 14%;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden; }
+  body .box5 {
+    background: #262626; }
+  body .box4 {
+    background: url("../img/bg4.jpg") no-repeat center;
+    background-size: cover; }
+  body .memory {
+    position: absolute;
+    font-family: "john Handy LET Plain";
+    font-size: 2em;
+    color: #c7254e;
+    padding-left: 12%;
+    bottom: 2%; }
+
+.kuang1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 35%; }
+
+.img1 {
+  border-radius: 30px; }
+
+.img2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform-origin: 0px 0px;
+  border-radius: 30px; }
+
+.img3 {
+  position: absolute;
+  left: -693px;
+  top: -1234px;
+  transform-origin: 100% 98%;
+  border-radius: 30px; }
+
+.img4 {
+  position: absolute;
+  left: -1193px;
+  top: 0px;
+  transform-origin: 100% 0%;
+  border-radius: 30px; }
+
+.qunian {
+  position: absolute;
+  left: 36%;
+  top: 8%;
+  opacity: 0.5; }
+
+.me {
+  position: absolute;
+  left: -4%;
+  bottom: 5%;
+  width: 50%; }
+
+.yujian {
+  position: absolute;
+  left: 0;
+  top: 32%;
+  font-size: 1.4em;
+  color: #c0795d;
+  padding-left: 8%; }
+
+.diyicijian {
+  position: absolute;
+  left: 0%;
+  top: 44%;
+  width: 50%; }
+
+.ta1 {
+  position: absolute;
+  right: -4%;
+  bottom: 5%;
+  width: 50%; }
+
+.paiji {
+  position: absolute;
+  right: -1%;
+  top: 46%;
+  width: 50%; }
+
+.puke2 {
+  position: absolute;
+  bottom: 6%;
+  left: 40%;
+  transform: rotateZ(90deg); }
+
+.puke3 {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: rotateY(35deg); }
+
+.puke4 {
+  position: absolute;
+  bottom: 10%;
+  left: 56%; }
+
+.yueding {
+  position: absolute;
+  left: 1%;
+  top: 3%; }
+
+.qianshou {
+  position: absolute;
+  left: 1%;
+  top: 8%;
+  width: 75%; }
+
+.zhougong {
+  position: absolute;
+  right: 1%;
+  top: 12%;
+  width: 75%; }
+
+.maozi {
+  position: absolute;
+  left: 1%;
+  top: 16%;
+  width: 75%; }
+
+.yantai {
+  position: absolute;
+  right: 1%;
+  top: 20%;
+  width: 75%; }
+
+.xijiao {
+  position: absolute;
+  left: 1%;
+  top: 24%;
+  width: 86%; }
+
+.huazhuang {
+  position: absolute;
+  right: 1%;
+  top: 28%;
+  width: 88%; }
+
+.xiao {
+  position: absolute;
+  left: 1%;
+  top: 32%;
+  width: 85%; }
+
+.chuan {
+  position: absolute;
+  right: 1%;
+  top: 36%;
+  width: 78%; }
+
+.biaobai {
+  position: absolute;
+  left: 1%;
+  top: 41%;
+  width: 82%; }
+
+.jiezhi {
+  position: absolute;
+  right: 1%;
+  top: 45%;
+  width: 80%; }
+
+.nvren {
+  position: absolute;
+  left: 1%;
+  top: 49%;
+  width: 84%; }
+
+.hunsha {
+  position: absolute;
+  right: 1%;
+  top: 55%;
+  width: 92%; }
+
+.jiaoshi {
+  position: absolute;
+  left: 1%;
+  top: 62%;
+  width: 92%; }
+
+.bufen {
+  position: absolute;
+  right: 1%;
+  top: 66%;
+  width: 88%; }
+
+.cengjing {
+  position: absolute;
+  left: 2%;
+  top: 72%; }
+
+.houlai {
+  position: absolute;
+  left: 2%;
+  top: 79%; }
+
+.xiaolongnv {
+  position: absolute;
+  left: 2%;
+  top: 86%; }
+
+.dd {
+  display: none; }
+
+.div1 {
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+i {
+  display: block;
+  font-size: 18px;
+  margin-top: 100px;
+  margin-left: 40%; }
+
+h2 {
+  margin-top: 30px;
+  font-size: 28px; }
+
+h1, h2, i {
+  color: #f7e1b5; }
+
+/*# sourceMappingURL=index.css.map */
