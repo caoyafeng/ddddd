@@ -57,7 +57,7 @@ $(function() {
 					if(window.localStorage) {
 						var ls = window.localStorage;
 						ls.setItem("enter", "true")
-						ls.setItem("srcs", "images/demo/head.png")
+						ls.setItem("srcs", "img/demo/head.png")
 					}
 				} else {
 					$(".tips").css({"visibility": "visible"}).text(tipArr[4]);
@@ -70,7 +70,7 @@ $(function() {
 					if(window.localStorage) {
 						var ls = window.localStorage;
 						ls.setItem("enter", "true")
-						ls.setItem("srcs", "images/demo/head.png");//登录头像
+						ls.setItem("srcs", "img/demo/head.png");//登录头像
 					}
 				} else {
 					$(".tips").css({"visibility": "visible"}).text(tipArr[4]);
@@ -107,7 +107,7 @@ $(function() {
 			ls.removeItem("enter");//判断登录情况
 			ls.removeItem("srcs");//头像
 			// ls.setItem("srcs", "images/user.png")
-			window.location.href = "../index.php"
+			window.location.href = "../main.html"
 		}
 	})
 
@@ -120,7 +120,7 @@ $(function() {
 		if(enters) {
 			$(".man-center img").attr("src", srcss);
 		} else {
-			$(".man-center img").attr("src", "images/user.png");
+			$(".man-center img").attr("src", "img/user.png");
 		}
 	}
 		
@@ -235,7 +235,7 @@ $(function() {
         } else {
             var ktext = $(".k-write-com textarea").val();
             $(".k-write-com").hide().children('i').html("");
-            $(".s-review").append("<div class='s-user'><img src='../images/s_user.jpg' /><div class='s-reply clearfix'><h2><em>贺纯元</em><em></em><span>34F</span></h2><p>"+ktext+"</p><p><em>刚刚</em><strong></strong><i>125</i></h3></div></p>")
+            $(".s-review").append("<div class='s-user'><img src='../img/s_user.jpg' /><div class='s-reply clearfix'><h2><em>贺纯元</em><em></em><span>34F</span></h2><p>"+ktext+"</p><p><em>刚刚</em><strong></strong><i>125</i></h3></div></p>")
             $(".s-amount strong").html(parseInt($(".s-amount strong").html())+1)
             $(".k-write-com textarea").val("");
             $(".k-sy-footer").show();
@@ -263,8 +263,3 @@ $(function() {
     	}
     })
 })
-
-// window.onbeforeunload = function()
-// {
-//     return "真的离开?";
-// }
